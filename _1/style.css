@@ -1,0 +1,91 @@
+/* Estou importando uma font personalizada pelo google fonts.*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+* { /* O "*" é para quando você estiver citando TUDO. */
+    /* adicionado o border-box, para não ficar fazendo o recalculo dos elementos. */
+    box-sizing: border-box;
+    /* Removendo o espaçamento de fora dos elementos.*/
+    margin: 0;
+    /* Removendo o espaçamento de dentro dos elementos.*/
+    padding: 0;
+    background-color: #24252A;
+}
+
+li, a, button, p{ /* Definindo estilo para todos os <li>, <a>, <button> e <p>*/
+    /* Definindo a font do <li>, <a>, <button> e <p> como Montserrat font personalizada que pegamos.*/
+    font-family: "Montserrat", sans-serif;
+    /* O font-weight é a definição do peso da font, ou seja o quanto a cor dessa font será, em 500 ela fica com uma cor mais solida e forte.
+    Simplesmente quantos menos weight aplicado mais "apagado" a font se torna e quanto mais, mais "pesada" e solida ela aparece.*/
+    font-weight: 500;
+    /* Definindo o tamanho do <li>, <a>, <button> e <p>.*/
+    font-size: 16px;
+    /* Definindo a cor.*/
+    color: #ecf0f1;
+    /* Removendo decorações dos textos destes elementos.*/
+    text-decoration: none;
+}
+
+header{
+    /* Defini o display do header como flexivel assim usando o metodo flexbox*/
+    display: flex; 
+    /* No justify e coloquei space-between, uma medida de alocamento dinamico no qual 
+    o conteúdo e dividido entre a esquerda meio e direita, perfeito para colocar
+    a logo na esquerda e o menu na direita.*/
+    justify-content: space-between;
+    /* Agora estou definindo o eixo transversal(apartir do meio) para o centro.*/
+    justify-items: center;
+    /*Aqui estou adicionando um espaçamento dentro do <header> de 30 pixels para cima e para baixo
+    e 10% de espaçamento para a direita e esquerda.*/
+    padding: 30px 10%;
+}
+
+.logo{
+    /* Definindo o tamanho da font deste elemento. */
+    font-size: 25px;
+    /*Estou definindo o cursor como pointer, ou seja quando ele passar no elemento com essa
+    definição (no caso o logo) ele estará modificando a aparencia do seu cursor e colocar
+    a mãozinha para pressionar.*/
+    cursor: pointer;
+}
+.nav__links{
+    /*Removendo o estilo das lista.*/
+    list-style: none;
+}
+
+.nav__links li{ /* Citando a mesma classe mas agora pegando como foco o <li>*/
+    /* Dentro do menu criado com a class nav__links eu estou citando LI <li> e estou definindo que ele tenha o display definido na mesma linha em blocos.
+    Ou seja inline(linha) block(bloco) Na mesma linha mas em blocos.*/
+    display: inline-block;
+    /* Definindo o espaçamento entre esses <li> de 0 pixels para cima e baixo e 20 pixels para direita e esquerda.*/
+    padding: 0px 20px;
+}
+
+.nav__links li a{ /* Citando o <li> dentro dessa classe, mas agora focando no <a> que esta dentro do <li>*/
+    /* Estou adicionando uma transição em tudo de 0.3 segundos e falicitando com 0 segundos.*/
+    transition: all 0.3s ease 0s;
+}
+
+.nav__links li a:hover{ /* Estou citando o <a> dentro do <li> mas agora estou colocando o :hover que seria quando você passar o mouse em cima.*/
+    /* Com o hover adicionado, quando passar o mouse em cima ele vai mudar a cor para essa cor que foi descrita.*/
+    color: #0088a9;
+}
+
+button {
+    /* Dentro do botão estou definindo uma espaçamento de 9 pixels para cima e 25 pixels para direita e esquerda.*/
+    padding: 9px 25px;
+    /* Estou definindo a cor do background.*/
+    background-color: rgba(0,136,169,1);
+    /* Estou removendo a borda do botão.*/
+    border: none;
+    /* Estou fazendo com que o botão fique mais arredondado, ou seja ele fica por padrão quadrado mas com esse comando ele fica mais arredondado. */
+    border-radius: 50px;
+    /* Ao passar o mouse em cima do botão defina a animação dele como pointer(mãozinha com o dedinho de clicar.)*/
+    cursor: pointer;
+    /* Colocando uma transição em tudo de 0.3 segundos e uma facilidade de 0 segundos.*/
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{ /* Adicionei o :hover no button, é usado para quando passar o mouse em cima, ele faça uma animação.*/
+    /* Ao passar o mouse em cima, mude a cor dele para esta cor.*/
+    background-color: rgba(0,136,169,0.8);
+}
